@@ -1,0 +1,11 @@
+li{
+    float: left;
+    display: inline;
+    background-color: antiquewhite;
+    padding: 5px;
+    font-size: larger;
+}
+a{
+    color: white;
+    background-color: cornflowerblue;
+}

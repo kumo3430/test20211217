@@ -1,0 +1,163 @@
+<div class="mainhead">
+    <div class="mainhead-inner">
+        <style type="text/css">
+            .mainhead,
+            .mainhead-inner,
+            .head_03,
+            .head_02,
+            .head_01 {
+                background: transparent !important;
+                border: 0 !important;
+            }
+
+            .mainhead {
+                background: #FFFFFF !important;
+                border-width: 1px !important;
+                border-color: #CCCCCC !important;
+                border-style: solid !important;
+            }
+
+            .mainhead a {}
+
+            .mainhead a:hover {}
+
+            .mainhead a:visited {}
+        </style>
+        <style type="text/css">
+            .sitename {
+                background: #FFFFFF !important;
+                border-width: 1px !important;
+                border-color: #CCCCCC !important;
+                border-style: solid !important;
+            }
+
+            .sitename a {}
+
+            .sitename a:hover {}
+
+            .sitename a:visited {}
+        </style>
+        <style type="text/css">
+            .slogan {
+                background: #FFFFFF !important;
+                border-width: 1px !important;
+                border-color: #CCCCCC !important;
+                border-style: solid !important;
+            }
+
+            .slogan a {}
+
+            .slogan a:hover {}
+
+            .slogan a:visited {}
+        </style>
+        <div id="Dyn_head">
+            <div class="selfhead">
+                <p><img alt="" src="/ezfiles/8/1008/img/14/topbanner.jpg" style="width: 997px; height: 176px" /><span
+                        style="color: rgb(0, 0, 0); font-family: &quot;Segoe UI&quot;, arial, helvetica, clean, sans-serif; line-height: 16.8px;">
+                    </span></p>
+                <div class="headmenu1">
+                    <div class="headnav">
+                        <div class="headnav-inner">
+                            <div class="hdmenu">
+                                <ul>
+                                    <li id="Hln_128">
+                                        <div class="menu-item"><a href="/home.php" title="回首頁">回首頁</a>
+                                        </div>
+                                    </li>
+                                    <li id="Hln_250">
+                                        <div class="menu-item"><a href="/files/11-1008-381.php" title="電算中心">電算中心</a>
+                                        </div>
+                                    </li>
+                                    <li id="Hln_251">
+                                        <div class="menu-item"><a href="/files/11-1008-393.php" title="一般服務">一般服務</a>
+                                        </div>
+                                    </li>
+                                    <li id="Hln_252">
+                                        <div class="menu-item"><a href="/files/11-1008-388.php" title="網路服務">網路服務</a>
+                                        </div>
+                                    </li>
+                                    <li id="Hln_253">
+                                        <div class="menu-item"><a href="/files/11-1008-378.php"
+                                                title="校園資訊系統">校園資訊系統</a></div>
+                                    </li>
+                                    <li id="Hln_254">
+                                        <div class="menu-item"><a href="/files/11-1008-379.php" title="法規辦法">法規辦法</a>
+                                        </div>
+                                    </li>
+                                    <li id="Hln_255">
+                                        <div class="menu-item"><a href="/files/11-1008-380.php" title="表格下載">表格下載</a>
+                                        </div>
+                                    </li>
+                                    <li id="Hln_279">
+                                        <div class="menu-item"><a href="/files/11-1008-649.php"
+                                                title="Q&amp;A">Q&amp;A</a></div>
+                                    </li>
+                                    <li id="Hln_258">
+                                        <div class="menu-item"><a href="https://www.nutc.edu.tw/bin/home.php"
+                                                target="_blank" title="臺中科大">臺中科大</a></div>
+                                    </li>
+                                    <li id="Hln_550">
+                                        <div class="menu-item"><a href="/files/11-1008-1020.php"
+                                                title="English">English</a></div>
+                                    </li>
+                                    <li id="Hln_2134">
+                                        <div class="menu-item"><a href="/files/11-1008-8861.php" title="網站地圖">網站地圖</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script language="javascript">
+                var _LoginHln = new hashUtil();
+
+                var _LogoutHln = new hashUtil();
+
+                var _HomeHln = new hashUtil();
+
+                var _InternalHln = new hashUtil();
+
+                if (typeof (isHome) == 'undefined') var isHome = false;
+                if (typeof (loginStat) == 'undefined') {
+                    var UidCookie = new strUtil(divOs.Cookie.getCookie("Cust"));
+                    if (UidCookie.trim() != "") loginStat = "login";
+                    else loginStat = "logout";
+                }
+                dealHln(isHome, loginStat);
+                function setHlnStat(p_hash, p_style) {
+                    var itemId, item;
+                    while (!p_hash.isEOF()) {
+                        itemId = p_hash.read()
+                        /*
+                                item = document.getElementById(itemId);
+                                if(item!=null && typeof(item)!='undefined')
+                                    item.style.display = p_style;
+                        */
+                        item = $('div.headnav').find('#' + itemId);
+                        if (p_style == 'block') item.show();
+                        else item.hide();
+                    }
+                    p_hash.resetPointer();
+                }
+
+
+                function openLangUrl(p_lang) {
+                    var curlang = divOs.getUrlParam("Lang");
+                    if (curlang != "") {
+                        var str = window.location + "";
+                        window.location = str.replace("Lang=" + curlang, "Lang=" + p_lang);
+                    }
+                    else {
+                        if (window.location.href.indexOf("?") > 0)
+                            window.location = window.location + '&Lang=' + p_lang;
+                        else
+                            window.location = window.location + '?Lang=' + p_lang;
+                    }
+                }
+            </script><noscript>Your browser does not support JavaScript!</noscript>
+        </div>
+    </div>
+</div>
